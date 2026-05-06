@@ -217,7 +217,7 @@ function renderProducts(filter) {
         <div class="product-desc">${p.desc}</div>
         <div class="product-footer">
           <div class="product-price">${p.price}€ <span>/ ${p.unit}</span></div>
-          <button class="add-cart" onclick="addToCart(${p.id})">+ Panier</button>
+          <button class="add-cart" onclick="addToCartFromPage(${p.id})">+ Panier</button>
         </div>
       </div>
     </div>
@@ -235,9 +235,19 @@ function filterProducts(cat, btn) {
   renderProducts(cat);
 }
 
-function addToCart(id) {
-  const count = document.querySelector('.cart-count');
-  count.textContent = parseInt(count.textContent) + 1;
+function addToCartFromPage(id) {
+  const product = products.find(p => p.id === id);
+  if (!product) return;
+  // Appelle la fonction globale de cart.js
+  addToCart({
+    id: product.id,
+    name: product.name,
+    price: product.price,
+    unit: product.unit,
+    img: product.img,
+    cat: catLabel(product.cat)
+  });
+  // Feedback visuel sur le bouton
   const btn = event.target;
   btn.textContent = '✓ Ajouté';
   btn.style.background = 'var(--gold)';
@@ -246,5 +256,6 @@ function addToCart(id) {
 
 renderProducts('all');
 </script>
+<script src="cart.js"></script>
 </body>
 </html>
