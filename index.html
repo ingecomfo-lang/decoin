@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DECO'IN – Moulures, Stucs & Décoration Intérieure | Ermont 95120</title>
+<meta name="description" content="DECO'IN, votre spécialiste en moulures, stucs, rosaces de plafond et corniches à Ermont (95120). Livraison rapide 3-5 jours. Appelez le 01 30 34 36 38.">
+<meta name="keywords" content="moulures décoration, stucs, rosaces plafond, corniches, plinthes LED, décoration intérieure, Ermont, 95120, Val d'Oise">
+<meta name="author" content="DECO'IN">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="DECO'IN – Décoration Intérieure Ermont">
+<meta property="og:description" content="Spécialiste moulures, stucs, rosaces et corniches à Ermont. Livraison 3-5 jours.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a96e;
+    --gold-light: #e8d5b0;
+    --gold-dark: #a07840;
+    --white: #ffffff;
+    --off-white: #f9f7f4;
+    --light-gray: #f0ede8;
+    --text: #2a2520;
+    --text-light: #6b6560;
+    --black: #1a1714;
+    --radius: 4px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    background: var(--black);
+    color: #ccc;
+    font-size: 0.78rem;
+    padding: 10px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .topbar-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+  }
+  .topbar-item .icon { color: var(--gold); font-size: 0.9rem; }
+  .topbar-item strong { color: var(--white); font-weight: 500; }
+
+  /* NAV */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid #ece8e0;
+    padding: 0 5vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .logo span { color: var(--text); }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .nav-icon {
+    font-size: 1.2rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+    position: relative;
+  }
+  .nav-icon:hover { color: var(--gold); }
+  .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--gold);
+    color: white;
+    font-size: 0.6rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
+  }
+
+  .hero-left {
+    background: linear-gradient(135deg, #e8e0d5 0%, #d5cdc0 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80') center/cover no-repeat;
+    opacity: 0.6;
+  }
+  .hero-left-content {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-left h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .hero-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .hero-right-top {
+    background: linear-gradient(135deg, #2a2520 0%, #3d3530 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+  }
+  .hero-right-top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80') center/cover no-repeat;
+    opacity: 0.3;
+  }
+
+  .hero-right-bottom {
+    background: linear-gradient(135deg, #5a5048 0%, #4a4038 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+  }
+  .hero-right-bottom::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80') center/cover no-repeat;
+    opacity: 0.25;
+  }
+
+  .hero-right-content {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-right-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .hero-right-content p {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 320px;
+    font-weight: 300;
+  }
+
+  /* BUTTONS */
+  .btn-dark {
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    padding: 12px 28px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--black);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btn-dark:hover { background: transparent; color: var(--black); }
+
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--white);
+    padding: 12px 28px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--gold);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btn-gold:hover { background: transparent; color: var(--gold); }
+
+  .btn-outline-white {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    padding: 10px 24px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btn-outline-white:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+
+  /* BANNER LED */
+  .led-banner {
+    background: var(--off-white);
+    padding: 60px 5vw;
+    text-align: center;
+  }
+  .led-banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text);
+    margin-bottom: 40px;
+  }
+  .led-banner h2 strong { font-style: normal; font-weight: 600; color: var(--gold); }
+
+  .led-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .led-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+  }
+  .led-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .led-card:hover img { transform: scale(1.05); }
+  .led-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    padding: 20px 16px 16px;
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* CATEGORIES */
+  .categories {
+    padding: 80px 5vw;
+    background: var(--white);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+  .section-title span { color: var(--gold); }
+  .see-all {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+  .see-all:hover { opacity: 0.7; }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .cat-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--light-gray);
+  }
+  .cat-card-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: transform 0.5s;
+    display: block;
+    background: var(--light-gray);
+  }
+  .cat-card:hover .cat-card-img { transform: scale(1.04); }
+  .cat-card-body {
+    padding: 20px;
+    background: var(--white);
+    border: 1px solid #ece8e0;
+    border-top: none;
+  }
+  .cat-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .cat-card-desc {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+  .cat-card-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+  .cat-card-link:hover { gap: 10px; }
+
+  /* PROMO BANNER */
+  .promo-banner {
+    background: var(--gold);
+    padding: 60px 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .promo-banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .promo-banner p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 28px;
+  }
+  .promo-banner-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* AVANTAGES */
+  .avantages {
+    padding: 60px 5vw;
+    background: var(--off-white);
+  }
+  .avantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .avantage-item { padding: 10px; }
+  .avantage-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+    color: var(--gold);
+  }
+  .avantage-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .avantage-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    color: #aaa;
+    padding: 60px 5vw 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .footer-desc {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #888;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .footer-contact {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.9;
+    font-weight: 300;
+  }
+  .footer-contact strong { color: var(--gold); font-weight: 500; }
+  .footer-col h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 300;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-bottom {
+    border-top: 1px solid #2a2520;
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #555;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { grid-template-rows: auto auto; }
+    .led-grid { grid-template-columns: repeat(2, 1fr); }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .avantages-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .promo-banner { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .cat-grid { grid-template-columns: 1fr; }
+    .led-grid { grid-template-columns: repeat(2, 1fr); }
+    .topbar { justify-content: center; }
+    .topbar-item:not(:first-child) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-item">
+    <span class="icon">💬</span>
+    <span>Service clientèle <strong>01 30 34 36 38</strong></span>
+  </div>
+  <div class="topbar-item">
+    <span class="icon">🚚</span>
+    <span>Livraison rapide <strong>3-5 jours ouvrables</strong></span>
+  </div>
+  <div class="topbar-item">
+    <span class="icon">🛡️</span>
+    <span>Achats en ligne sécurisés <strong>Paiement 100% sécurisé</strong></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">DECO<span>'IN</span></a>
+  <ul class="nav-links">
+    <li><a href="produits.html">Produits</a></li>
+    <li><a href="inspiration.html">Inspiration</a></li>
+    <li><a href="guides.html">Guides</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-icons">
+    <a href="#" class="nav-icon">🔍</a>
+    <a href="#" class="nav-icon">♡</a>
+    <a href="#" class="nav-icon">👤</a>
+    <a href="#" class="nav-icon" style="position:relative">🛒<span class="cart-count">0</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-left-content">
+      <h1>Large palette<br>de stucs &amp;<br>moulures</h1>
+      <a href="#" class="btn-dark">Voir l'ensemble des produits</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-top">
+      <div class="hero-right-content">
+        <h2>Rosace de plafond</h2>
+        <p>Rosaces dans une grande variété de styles, allant de formes simples et plates à de plus grandes et ornées.</p>
+        <a href="#" class="btn-outline-white">Commencez vos achats</a>
+      </div>
+    </div>
+    <div class="hero-right-bottom">
+      <div class="hero-right-content">
+        <h2>Corniches</h2>
+        <p>Une grande variété de styles, de différentes tailles, avec des corniches ornementales ou pleines.</p>
+        <a href="#" class="btn-outline-white">Voir les produits</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LED BANNER -->
+<section class="led-banner">
+  <h2>Des plinthes profilées pour installer des <strong>bandes LED</strong> pour changer d'ambiance</h2>
+  <div class="led-grid">
+    <div class="led-card">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Plinthe LED salon">
+      <div class="led-card-overlay">Salon moderne</div>
+    </div>
+    <div class="led-card">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="Plinthe LED chambre">
+      <div class="led-card-overlay">Chambre cosy</div>
+    </div>
+    <div class="led-card">
+      <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=400&q=80" alt="Plinthe LED cuisine">
+      <div class="led-card-overlay">Cuisine design</div>
+    </div>
+    <div class="led-card">
+      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=400&q=80" alt="Plinthe LED couloir">
+      <div class="led-card-overlay">Couloir élégant</div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+  <div class="section-header">
+    <h2 class="section-title">Nos <span>collections</span></h2>
+    <a href="#" class="see-all">Voir tout →</a>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card">
+      <img class="cat-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Moulures">
+      <div class="cat-card-body">
+        <div class="cat-card-name">Moulures décoratives</div>
+        <div class="cat-card-desc">Embellissez vos murs et plafonds avec notre sélection de moulures classiques et contemporaines.</div>
+        <a href="#" class="cat-card-link">Découvrir →</a>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-card-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Rosaces">
+      <div class="cat-card-body">
+        <div class="cat-card-name">Rosaces de plafond</div>
+        <div class="cat-card-desc">Du modèle simple et épuré aux créations les plus ornées, trouvez la rosace parfaite pour votre intérieur.</div>
+        <a href="#" class="cat-card-link">Découvrir →</a>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-card-img" src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80" alt="Corniches">
+      <div class="cat-card-body">
+        <div class="cat-card-name">Corniches & stucs</div>
+        <div class="cat-card-desc">Des corniches ornementales aux stucs décoratifs pour habiller vos angles et créer du volume.</div>
+        <a href="#" class="cat-card-link">Découvrir →</a>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-card-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Plinthes LED">
+      <div class="cat-card-body">
+        <div class="cat-card-name">Plinthes & profilés LED</div>
+        <div class="cat-card-desc">Des plinthes spécialement conçues pour intégrer des rubans LED et créer une ambiance lumineuse unique.</div>
+        <a href="#" class="cat-card-link">Découvrir →</a>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-card-img" src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?w=600&q=80" alt="Panneaux muraux">
+      <div class="cat-card-body">
+        <div class="cat-card-name">Panneaux muraux</div>
+        <div class="cat-card-desc">Revêtements muraux décoratifs pour transformer rapidement l'aspect de vos pièces.</div>
+        <a href="#" class="cat-card-link">Découvrir →</a>
+      </div>
+    </div>
+    <div class="cat-card">
+      <img class="cat-card-img" src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="Accessoires">
+      <div class="cat-card-body">
+        <div class="cat-card-name">Colles & accessoires</div>
+        <div class="cat-card-desc">Tout le nécessaire pour poser vos décorations : colles, enduits, outils et accessoires de finition.</div>
+        <a href="#" class="cat-card-link">Découvrir →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNER -->
+<section class="promo-banner">
+  <div>
+    <h2>Transformez votre intérieur avec élégance</h2>
+    <p>Chez DECO'IN à Ermont, nous vous proposons une large sélection de produits de décoration intérieure haut de gamme. Stucs, moulures, rosaces — tout pour donner du caractère à votre espace.</p>
+    <a href="#" class="btn-dark" style="border-color:#fff; background:#fff; color:var(--gold)">Voir nos nouveautés</a>
+  </div>
+  <img class="promo-banner-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="Décoration intérieure">
+</section>
+
+<!-- AVANTAGES -->
+<section class="avantages">
+  <div class="avantages-grid">
+    <div class="avantage-item">
+      <div class="avantage-icon">🚚</div>
+      <div class="avantage-title">Livraison rapide</div>
+      <div class="avantage-desc">Expédition en 24h, livraison en 3 à 5 jours ouvrables partout en France</div>
+    </div>
+    <div class="avantage-item">
+      <div class="avantage-icon">🛡️</div>
+      <div class="avantage-title">Paiement sécurisé</div>
+      <div class="avantage-desc">Transactions 100% sécurisées. Vos données bancaires sont protégées</div>
+    </div>
+    <div class="avantage-item">
+      <div class="avantage-icon">↩️</div>
+      <div class="avantage-title">Retours faciles</div>
+      <div class="avantage-desc">30 jours pour changer d'avis. Retours simples et remboursement garanti</div>
+    </div>
+    <div class="avantage-item">
+      <div class="avantage-icon">💬</div>
+      <div class="avantage-title">Conseil expert</div>
+      <div class="avantage-desc">Notre équipe vous conseille au 01 30 34 36 38 du lundi au samedi</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">DECO'IN</div>
+      <div class="footer-desc">Votre spécialiste en décoration intérieure : moulures, stucs, rosaces de plafond, corniches et plinthes LED. Des produits de qualité pour sublimer votre intérieur.</div>
+      <div class="footer-contact">
+        <div>📍 <strong>Ermont</strong>, 95120 Val d'Oise</div>
+        <div>📞 <strong>01 30 34 36 38</strong></div>
+        <div>✉️ <strong>contact@decoin.fr</strong></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Produits</h4>
+      <ul>
+        <li><a href="#">Moulures</a></li>
+        <li><a href="#">Rosaces de plafond</a></li>
+        <li><a href="#">Corniches</a></li>
+        <li><a href="#">Stucs décoratifs</a></li>
+        <li><a href="#">Plinthes LED</a></li>
+        <li><a href="#">Panneaux muraux</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="#">À propos de nous</a></li>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Retours</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Blog & Inspiration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Mon compte</h4>
+      <ul>
+        <li><a href="#">Se connecter</a></li>
+        <li><a href="#">Créer un compte</a></li>
+        <li><a href="#">Mes commandes</a></li>
+        <li><a href="#">Ma liste de souhaits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 DECO'IN – Ermont, 95120. Tous droits réservés.</span>
+    <span>Mentions légales · Politique de confidentialité · CGV</span>
+  </div>
+</footer>
+
+</body>
+</html>
